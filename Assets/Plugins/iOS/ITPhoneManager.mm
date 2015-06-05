@@ -22,7 +22,7 @@ UICKeyChainStore *keychain;
     self = [super init];
     if (self) {
     	networkInfo = [[CTTelephonyNetworkInfo alloc] init];
-    	keychain = [UICKeyChainStore keyChainStoreWithService:@"com.genc.wog"];
+    	keychain = [UICKeyChainStore keyChainStoreWithService:@"com.example.app"];
     }
     return self;
 }
