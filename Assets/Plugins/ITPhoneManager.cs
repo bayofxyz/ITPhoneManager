@@ -52,7 +52,8 @@ public class ITPhoneManager {
 #if (UNITY_IPHONE || UNITY_IOS) && !UNITY_EDITOR
 		value = _getNetworkOperator();
 #elif UNITY_ANDROID && !UNITY_EDITOR
-		value = telephonyManager.Call<string>("getNetworkOperator");
+		if (telephonyManager != null)
+			value = telephonyManager.Call<string>("getNetworkOperator");
 #endif
 		return value;
 	}
